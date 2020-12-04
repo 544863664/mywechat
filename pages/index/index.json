@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "my-component": "/components/component-1/component-1",
+    "mp-tabs": "../../components/tabs/index"
+  }
+}

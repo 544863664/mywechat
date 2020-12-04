@@ -1,0 +1,23 @@
+{
+  "name": "mywechat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "weui-miniprogram": "^1.0.6"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/544863664/mywechat.git"
+  },
+  "bugs": {
+    "url": "https://github.com/544863664/mywechat/issues"
+  },
+  "homepage": "https://github.com/544863664/mywechat#readme"
+}

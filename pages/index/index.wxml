@@ -1,0 +1,39 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="swiper">
+    <swiper indicator-dots="{{swiper.indicatorDots}}" circular="{{swiper.circular}}" autoplay="{{swiper.autoplay}}"
+      interval="{{swiper.interval}}" duration="{{swiper.duration}}">
+      <block wx:for="{{swiper.background}}" wx:key="*this">
+        <swiper-item>
+          <view class="swiper-item">
+            <image src="{{item}}" style="height: 150px;width: 100%;"></image>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <mp-tabs tabs="{{tabs}}" activeTab="{{activeTab}}" swiperClass="weui-tabs-swiper" bindtabclick="onTabCLick"
+    bindchange="onChange" activeClass="tab-bar-title__selected">
+    <block wx:for="{{tabs}}" wx:key="title">
+      <view class="tab-content" slot="tab-content-{{index}}">
+        <view>{{item.title2}}</view>
+        <view>{{item.desc}}</view>
+      </view>
+    </block>
+  </mp-tabs>
+
+
+  <!-- <my-component bindmyevent="myEventListener"> -->
+  <!-- 这部分内容将被放置在组件 <slot> 的位置上 -->
+  <!-- <view></view> -->
+  <!-- </my-component> -->
+
+  <!-- <import src="../../components/component-2/comonent-2.wxml"></import> -->
+  <!-- <template is="boxlist" data="{{arr}}" />
+  <template is="boxlist2" data="{{arr2}}" /> -->
+
+
+  <!-- 回到顶部按钮 -->
+  <view class="scrollgotop" wx:if="{{scrollBtn}}" bindtap="scrollgotop">回到顶部</view>
+
+</view>

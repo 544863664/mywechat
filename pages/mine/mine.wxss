@@ -1,0 +1,17 @@
+/* pages/mine/mine.wxss */
+.minePage .userinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .minePage .userinfo .userinfo-avatar {
+    width: 128rpx;
+    height: 128rpx;
+    margin: 20rpx;
+    border-radius: 50%;
+  }
+  
+  .minePage .userinfo .userinfo-nickname {
+    color: #aaa;
+  }

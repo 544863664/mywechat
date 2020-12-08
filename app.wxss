@@ -6,4 +6,15 @@
   z-index: 1000;
   bottom: 60rpx;
   right: 60rpx;
+  width: 80rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  background-color: rgba(0, 0, 0, .4);
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.scrollgotop .homeGotop {
+  transform: rotate(90deg);
 }

@@ -1,0 +1,105 @@
+<!--pages/home/home.wxml-->
+<view class="home">
+    <view class="home-searchbar page__bd">
+        <mp-searchbar bindselectresult="selectResult" search="{{search}}"></mp-searchbar>
+    </view>
+    <view class="home-swiper">
+        <swiper indicator-dots="{{swiper.indicatorDots}}" circular="{{swiper.circular}}" autoplay="{{swiper.autoplay}}"
+            interval="{{swiper.interval}}" duration="{{swiper.duration}}">
+            <block wx:for="{{swiper.background}}" wx:key="*this">
+                <swiper-item>
+                    <view class="swiper-item">
+                        <image src="{{item}}" style="height: 150px;width: 100%;"></image>
+                    </view>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <view class="home-tabs">
+        <mp-tabs tabs="{{tabs}}" activeTab="{{activeTab}}" swiperClass="weui-tabs-swiper" bindtabclick="onTabClick"
+            bindchange="onChange" activeClass="tab-bar-title__selected">
+            <block wx:for="{{tabs}}" wx:key="title">
+                <view class="tab-content" data-set="{{item}}" slot="tab-content-{{index}}" bind:tap="handleClick">
+                    <image src="{{item.img}}" mode="widthFix"></image>
+                    <view class="item-title">
+                        {{item.title2}}
+                    </view>
+                    <view class="item-desc">
+                        {{item.desc}}
+                    </view>
+                </view>
+            </block>
+        </mp-tabs>
+    </view>
+    <view class="home-icon">
+        <view class="page__bd page__bd_spacing">
+            <view class="weui-flex">
+                <view class="weui-flex__item" wx:for="{{icons}}" wx:key="index">
+                    <view class="placeholder">
+                        <mp-icon type="{{item.type}}" icon="{{item.icon}}" color="{{item.color}}" size="{{item.size}}"></mp-icon>
+                        <view class="icon-text">{{item.icon}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="home-flex">
+        <view class="page__bd page__bd_spacing">
+            <view class="weui-flex">
+                <view class="weui-flex__item">
+                    <view class="placeholder">weui</view>
+                </view>
+            </view>
+            <view class="weui-flex">
+                <view class="weui-flex__item">
+                    <view class="placeholder">weui</view>
+                </view>
+                <view class="weui-flex__item">
+                    <view class="placeholder">weui</view>
+                </view>
+            </view>
+            <view class="weui-flex">
+                <view class="weui-flex__item">
+                    <view class="placeholder">weui</view>
+                </view>
+                <view class="weui-flex__item">
+                    <view class="placeholder">weui</view>
+                </view>
+                <view class="weui-flex__item">
+                    <view class="placeholder">weui</view>
+                </view>
+            </view>
+            <view class="weui-flex">
+                <view class="weui-flex__item">
+                    <view class="placeholder">weui</view>
+                </view>
+                <view class="weui-flex__item">
+                    <view class="placeholder">weui</view>
+                </view>
+                <view class="weui-flex__item">
+                    <view class="placeholder">weui</view>
+                </view>
+                <view class="weui-flex__item">
+                    <view class="placeholder">weui</view>
+                </view>
+            </view>
+            <view class="weui-flex">
+                <view>
+                    <view class="placeholder">weui</view>
+                </view>
+                <view class="weui-flex__item">
+                    <view class="placeholder">weui</view>
+                </view>
+                <view>
+                    <view class="placeholder">weui</view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+
+    <!-- 回到顶部按钮 -->
+    <view class="scrollgotop" wx:if="{{scrollBtn}}" bindtap="scrollgotop">
+        <mp-icon extClass="homeGotop" type="field" icon="sending" color="#fff" size="{{21}}"></mp-icon>
+    </view>
+</view>

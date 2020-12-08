@@ -1,7 +1,0 @@
-<!-- component-1 模板 -->
-<view class="component-1">
-    <view>这里是组件的内部节点</view>
-    <view>{{data1}}</view>
-    <view>{{data2}}</view>
-    <button bindtap="onTap">点击这个按钮将触发“myevent”事件</button>
-</view>

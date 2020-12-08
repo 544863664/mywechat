@@ -1,6 +1,0 @@
-.boxlist {
-    margin: 20rpx;
-  }
-.boxlist .listitem {
-    line-height: 200rpx;
-  }

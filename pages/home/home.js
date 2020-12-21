@@ -2,10 +2,6 @@
 //获取应用实例
 const app = getApp()
 var slide1 = "../../images/slide1.jpg"
-var slide2 = "../../images/slide2.jpg"
-var slide3 = "../../images/slide3.jpg"
-var slide4 = "../../images/slide4.jpg"
-var slide5 = "../../images/slide5.jpg"
 Page({
 
     /**
@@ -14,7 +10,7 @@ Page({
     data: {
         // 轮播图
         swiper: {
-            background: [slide1, slide2, slide3, slide4, slide5],
+            background: [slide1, slide1, slide1, slide1, slide1],
             indicatorDots: true,
             vertical: false,
             circular: true,
@@ -42,6 +38,11 @@ Page({
             search: this.search.bind(this),
             tabs: app.globalData.home.homeTabs,
             icons: app.globalData.home.homeIcon
+        })
+        wx.getSystemInfo({
+          success: (result) => {
+              console.log("设备信息：", result)
+          },
         })
     },
 
@@ -143,7 +144,7 @@ Page({
     handleClick(e) {
         console.log(e);
         wx.navigateTo({
-            url: "/pages/index/index"
+            url: "/pages/index/index?title="+e.currentTarget.dataset.title
         })
     },
 

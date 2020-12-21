@@ -6,7 +6,7 @@
     <view class="home-swiper">
         <swiper indicator-dots="{{swiper.indicatorDots}}" circular="{{swiper.circular}}" autoplay="{{swiper.autoplay}}"
             interval="{{swiper.interval}}" duration="{{swiper.duration}}">
-            <block wx:for="{{swiper.background}}" wx:key="*this">
+            <block wx:for="{{swiper.background}}" wx:key="index">
                 <swiper-item>
                     <view class="swiper-item">
                         <image src="{{item}}" style="height: 150px;width: 100%;"></image>
@@ -19,7 +19,7 @@
         <mp-tabs tabs="{{tabs}}" activeTab="{{activeTab}}" swiperClass="weui-tabs-swiper" bindtabclick="onTabClick"
             bindchange="onChange" activeClass="tab-bar-title__selected">
             <block wx:for="{{tabs}}" wx:key="title">
-                <view class="tab-content" data-set="{{item}}" slot="tab-content-{{index}}" bind:tap="handleClick">
+                <view class="tab-content" data-set="{{item}}" slot="tab-content-{{index}}" data-title="{{item.title}}" bind:tap="handleClick">
                     <image src="{{item.img}}" mode="widthFix"></image>
                     <view class="item-title">
                         {{item.title2}}

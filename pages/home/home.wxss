@@ -13,6 +13,10 @@
     height: 280px;
 }
 
+.home .home-tabs .weui-tabs-bar__content::-webkit-scrollbar {
+    display: none;
+  }
+
 .home .home-tabs .tab-content {
     padding: 20rpx;
 }

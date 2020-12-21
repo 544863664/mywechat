@@ -1,5 +1,4 @@
 {
-  "navigationBarTitleText": "测试页",
   "usingComponents": {
     "mp-searchbar": "weui-miniprogram/searchbar/searchbar",
     "mp-icon": "weui-miniprogram/icon/icon"

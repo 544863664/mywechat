@@ -4,6 +4,20 @@
     "pages/mine/mine",
     "pages/index/index"
   ],
+  "subpackages": [{
+    "root": "pages/packageA",
+    "pages": [
+      "pages/cat/cat",
+      "pages/dog/dog"
+    ]
+  }, {
+    "root": "pages/packageB",
+    "name": "pack2",
+    "pages": [
+      "pages/apple/apple",
+      "pages/banana/banana"
+    ]
+  }],
   "window": {
     "enablePullDownRefresh": true,
     "backgroundTextStyle": "dark",

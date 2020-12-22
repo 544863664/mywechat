@@ -34,7 +34,24 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        console.log(res)
+        if (res.code) {
+          wx.request({
+            method: 'GET',
+            url: 'https://liguodongexploit.com/api/getsession',
+            data: {
+              code: res.code
+            },
+            success: function(response) {
+              if (response.statusCode == 200 && response.data.code == 200) {
+                var token = response.data.data.access_token;
+                console.log(token);
+              }
+            },
+            fail: function(error) {
+              console.log(error);
+            }
+          })
+        }
       }
     })
     // 获取用户信息
@@ -59,6 +76,7 @@ App({
     })
   },
   globalData: {
+    urlApi: 'https://liguodongexploit.com/api',
     userInfo: null,
     home: {
       homeTabs: [{

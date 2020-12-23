@@ -39,11 +39,6 @@ Page({
             tabs: app.globalData.home.homeTabs,
             icons: app.globalData.home.homeIcon
         })
-        wx.getSystemInfo({
-          success: (result) => {
-              console.log("设备信息：", result)
-          },
-        })
     },
 
     /**
@@ -142,7 +137,6 @@ Page({
 
     // 点击tab内容事件
     handleClick(e) {
-        console.log(e);
         wx.navigateTo({
             url: "/pages/index/index?title="+e.currentTarget.dataset.title
         })

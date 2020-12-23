@@ -1,9 +1,6 @@
 <!--index.wxml-->
 <view class="index container">
-  <view class="index_searchbar page__bd">
-    <mp-searchbar bindselectresult="selectResult" search="{{search}}"></mp-searchbar>
-  </view>
-
+  
   <view class="index_icon">
     <mp-icon type="field" icon="add" color="black" size="{{25}}"></mp-icon>
     <mp-icon type="field" icon="at" color="black" size="{{25}}"></mp-icon>

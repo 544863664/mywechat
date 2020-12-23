@@ -1,4 +1,4 @@
-// pages/home/home.js
+// pages/index/index.js
 //获取应用实例
 const app = getApp()
 
@@ -18,9 +18,6 @@ Page({
     console.log(app.globalData.urlApi)
     wx.setNavigationBarTitle({
       title: options.title
-    })
-    this.setData({
-      search: this.search.bind(this)
     })
   },
 
@@ -82,28 +79,7 @@ Page({
   /**
    * 页面函数
    */
-  // 头部搜索框
-  search: function (value) {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve([{
-          text: '搜索结果',
-          value: 1
-        }, {
-          text: '搜索结果2',
-          value: 2
-        }])
-      }, 200)
-    })
-  },
-  // 搜索结果事件
-  selectResult: function (e) {
-    console.log('select result', e.detail)
-  },
-  // 
-  myEventListener: function (e) {
-    console.log(e)
-  },
+  
 
 
 })
